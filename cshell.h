@@ -14,7 +14,7 @@
 extern char **environ;
 
 /*  custom functions */
-int my_strcmp(char *st1, char *st2);
+int my_strcmp(const char *st1, const char *st2);
 int exec_cmd(char **av, char *loc, char **argv, char **envr);
 
 size_t my_strlen(const char *st);
@@ -24,7 +24,7 @@ char *my_strtok(char *st, const char *delimit);
 void isComment(char *st);
 
 char *my_strpbrk(const char *st1, const char *st2);
-void print_err(char *av, int respond, char *argv);
+void print_err(const char *av, int respond, const char *argv);
 
 char *my_strcpy(char *dest, const char *src);
 int _putchar(char c);
