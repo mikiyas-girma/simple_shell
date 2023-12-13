@@ -18,7 +18,7 @@ int my_strcmp(char *st1, char *st2);
 int exec_cmd(char **av, char *loc, char **argv, char **envr);
 
 size_t my_strlen(const char *st);
-void continue(char **av, char **envr);
+void repeat(char **av, char **envr);
 
 char *my_strtok(char *st, const char *delimit);
 void isComment(char *st);
