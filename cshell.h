@@ -45,7 +45,7 @@ int my_strncmp(const char *st1, const char *st2, size_t n);
 
 void fr_argv(char **argv);
 
-void tokenize(char *buff, char **argv, const char *delim );
+void tokenize(char *buff, char **argv, const char *delim);
 
 int isBuiltInCmd(char *buff, char **argv);
 
