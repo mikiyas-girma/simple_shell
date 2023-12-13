@@ -6,7 +6,8 @@
  */
 void fr_argv(char **argv)
 {
-	for (int x = 0; argv[x] != NULL; x++)
+	int x;
+	for (x = 0; argv[x] != NULL; x++)
 	{
 		free(argv[x]);
 	}

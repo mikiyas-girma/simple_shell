@@ -10,7 +10,7 @@ char *my_strcpy(char *dest, const char *src)
 {
 	char *destination = dest;
 
-	while ((*dest++ = *src++) != '\0')
+	while ((*dest++ = *src++) != '\0');
 	return (destination);
 }
 

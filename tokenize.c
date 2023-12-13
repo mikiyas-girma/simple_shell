@@ -9,8 +9,9 @@
 void tokenize(char *buff, char **argv, const char *delim)
 {
 	int ac = 0;
+	char *tok;
 
-	for (char *tok = my_strtok(buff, delim); tok != NULL && ac < ARG_MAX - 1;
+	for (tok = my_strtok(buff, delim); tok != NULL && ac < ARG_MAX - 1;
 	tok = my_strtok(NULL, delim))
 	{
 		argv[ac++] = my_strdup(tok);

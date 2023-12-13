@@ -5,9 +5,11 @@
  */
 void isComment(char *st)
 {
+	int i;
+
 	if (!st)
 		return;
-	int i = 0;
+	i = 0;
 
 	while (st[i])
 	{
@@ -31,6 +33,7 @@ void isComment(char *st)
 char *my_strtok(char *st, const char *delim)
 {
 	static char *end;
+	char *tok;
 
 	if (st != NULL)
 		end = st;
@@ -44,7 +47,7 @@ char *my_strtok(char *st, const char *delim)
 	if (*end == '\0')
 		return (NULL);
 
-	char *tok = end;
+	tok = end;
 
 	while (*end != '\0' && my_strchr(delim, *end) == NULL)
 		end++;

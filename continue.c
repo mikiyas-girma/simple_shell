@@ -54,9 +54,10 @@ void repeat(char **av, char **envr)
  */
 size_t my_strlen(const char *st)
 {
+	size_t q;
 	if (!st)
 		return (0);
-	size_t q = 0;
+	q = 0;
 
 	while (*st++)
 		q++;

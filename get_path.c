@@ -12,12 +12,18 @@
 char *find_path(char *loc, char *argv, char *av, int mod, int ctr)
 {
 	char *tmp = my_strdup(loc);
+	char *delim;
+	char *tok;
+
+	(void)av;
+	(void)mod;
+	(void)ctr;
 
 	if (tmp == NULL)
 		return (NULL);
 
-	char *delim = ":";
-	char *tok = my_strtok(tmp, delim);
+	delim = ":";
+	tok = my_strtok(tmp, delim);
 
 	while (tok != NULL)
 	{

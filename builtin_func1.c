@@ -27,11 +27,14 @@ char *my_strcat(char *st1, char *st2)
  */
 char *my_strdup(const char *st)
 {
+	size_t sz;
+	char *dpl;
+
 	if (st == NULL)
 		return (NULL);
 
-	size_t sz = my_strlen(st);
-	char *dpl = (char *)malloc(sz + 1);
+	sz = my_strlen(st);
+	dpl = (char *)malloc(sz + 1);
 
 	if (dpl != NULL)
 		my_strcpy(dpl, st);
