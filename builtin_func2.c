@@ -8,12 +8,12 @@
  */
 char *my_strchr(const char *st, int q)
 {
-    while (*st != '\0' && *st != q)
-    {
-        st++;
-    }
+	while (*st != '\0' && *st != q)
+	{
+		st++;
+	}
 
-    return ((*st == q || q == '\0') ? (char *)st : NULL);
+	return ((*st == q || q == '\0') ? (char *)st : NULL);
 }
 
 /**
@@ -22,17 +22,17 @@ char *my_strchr(const char *st, int q)
  * @st2: variable 2
  * @n: number of characters to compare
  *
- * Return: 0 
+ * Return: 0
  */
 int my_strncmp(const char *st1, const char *st2, size_t n)
 {
-    for (size_t j = 0; j < n; ++j)
-    {
-        if (st1[j] != st2[j] || st1[j] == '\0')
-        {
-            return ((int)(unsigned char)st1[j] - (int)(unsigned char)st2[j]);
-        }
-    }
+	for (size_t j = 0; j < n; ++j)
+	{
+		if (st1[j] != st2[j] || st1[j] == '\0')
+		{
+			return ((int)(unsigned char)st1[j] - (int)(unsigned char)st2[j]);
+		}
+	}
 
-    return 0;
+	return (0);
 }
