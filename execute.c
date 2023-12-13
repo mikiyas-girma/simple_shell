@@ -10,32 +10,33 @@
 
 int exec_cmd(char **av, char *loc, char **argv, char **envr)
 {
-    pid_t pid = fork();
+	pid_t pid = fork();
 
-    if (pid < 0)
-    {
-        perror(av[0]);
-        exit(EXIT_FAILURE);
-    }
-    else if (pid == 0)
-    {
-        if (execve(loc, argv, envr) == -1)
-        {
-            perror(av[0]);
-            exit(EXIT_FAILURE);
-        }
-    }
-    else
-    {
-        int stat;
-        if (waitpid(pid, &stat, 0) == -1)
-        {
-            perror(av[0]);
-            exit(EXIT_FAILURE);
-        }
-    }
+	if (pid < 0)
+	{
+		perror(av[0]);
+		exit(EXIT_FAILURE);
+	}
+	else if (pid == 0)
+	{
+		if (execve(loc, argv, envr) == -1)
+		{
+			perror(av[0]);
+			exit(EXIT_FAILURE);
+		}
+	}
+	else
+	{
+		int stat;
 
-    return EXIT_SUCCESS;
+		if (waitpid(pid, &stat, 0) == -1)
+		{
+			perror(av[0]);
+			exit(EXIT_FAILURE);
+		}
+	}
+
+	return (EXIT_SUCCESS);
 }
 
 
@@ -47,12 +48,12 @@ int exec_cmd(char **av, char *loc, char **argv, char **envr)
  */
 int my_strcmp(const char *st1, const char *st2)
 {
-    while (*st1 && *st1 == *st2)
-    {
-        st1++;
-        st2++;
-    }
+	while (*st1 && *st1 == *st2)
+	{
+		st1++;
+		st2++;
+	}
 
-    return *(unsigned char *)st1 - *(unsigned char *)st2;
+	return (*(unsigned char *)st1 - *(unsigned char *)st2);
 }
 
