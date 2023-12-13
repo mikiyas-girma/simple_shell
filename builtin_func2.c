@@ -27,6 +27,7 @@ char *my_strchr(const char *st, int q)
 int my_strncmp(const char *st1, const char *st2, size_t n)
 {
 	size_t j;
+
 	for (j = 0; j < n; ++j)
 	{
 		if (st1[j] != st2[j] || st1[j] == '\0')
