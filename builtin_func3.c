@@ -1,5 +1,4 @@
 #include "cshell.h"
-
 /**
  * my_strcpy - copies string from src to dest
  * @dest: to which string is copied
@@ -9,13 +8,11 @@
  */
 char *my_strcpy(char *dest, const char *src)
 {
-    char *destination = dest;
+	char *destination = dest;
 
-    while ((*dest++ = *src++) != '\0');
-
-    return destination;
+	while ((*dest++ = *src++) != '\0')
+	return (destination);
 }
-
 
 /**
  * _putchar - custom implementation of putchar builtin
