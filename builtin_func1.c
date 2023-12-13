@@ -9,14 +9,14 @@
  */
 char *my_strcat(char *st1, char *st2)
 {
-    char *pr = st1 + my_strlen(st1);
+	char *pr = st1 + my_strlen(st1);
 
-    while ((*pr++ = *st2++))
-    {
+	while ((*pr++ = *st2++))
+	{
 
-    }
+	}
 
-    return st1;
+	return (st1);
 }
 
 /**
@@ -27,14 +27,14 @@ char *my_strcat(char *st1, char *st2)
  */
 char *my_strdup(const char *st)
 {
-    if (st == NULL)
-        return NULL;
+	if (st == NULL)
+		return (NULL);
 
-    size_t sz = my_strlen(st);
-    char *dpl = (char *)malloc(sz + 1);
+	size_t sz = my_strlen(st);
+	char *dpl = (char *)malloc(sz + 1);
 
-    if (dpl != NULL)
-        my_strcpy(dpl, st);
+	if (dpl != NULL)
+		my_strcpy(dpl, st);
 
-    return dpl;
+	return (dpl);
 }
